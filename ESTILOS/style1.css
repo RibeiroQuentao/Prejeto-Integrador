@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Pirata+One&family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -80,7 +81,7 @@ a:hover {
     /*titulo*/
     float: left;
     text-align: center;
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 70px;
     color: #000000;
     padding-left: 100px;
@@ -226,7 +227,7 @@ button:hover {
 
 
 }
-
+/*  
 .clear {
     clear: both;
 }
@@ -235,6 +236,7 @@ button:hover {
     float: left;
     text-align: center;
 }
+    */
 .ovos img{
     padding: 80px;
 }
