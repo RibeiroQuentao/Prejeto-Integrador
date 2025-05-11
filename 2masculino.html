@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Academy Shop</title>
+  <link rel="shortcut icon" href="IMG/IconAcademyShop.png" type="image/x-icon" />
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 10px;
+    }
+
+    header {
+      background: #000000;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 90px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .search-container input {
+      padding: 6px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .search-container button {
+      padding: 6px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #000000;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-container button:hover,
+    .search-container button:focus {
+      background-color: #504f4c;
+      outline: none;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-links a img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
+    }
+
+    .social-links a:hover img,
+    .social-links a:focus img {
+      filter: brightness(0) invert(0.7);
+      outline: none;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+
+    .banner {
+      width: 100%;
+      height: 500px;
+      background-image: url('IMG/banner2.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .banner h2 {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-size: 1.8rem;
+    }
+
+    .products-section {
+      margin-bottom: 40px;
+    }
+
+    .products-section h2 {
+      margin-bottom: 12px;
+      text-align: center;
+      color: #004080;
+      font-weight: 700;
+      font-size: 1.9rem;
+    }
+
+    .products-container {
+      /* clearfix */
+      overflow: hidden;
+      padding-top: 10px;
+    }
+
+    .product-card {
+      float: left;
+      width: 23%; /* about 4 items per row with margins */
+      margin: 1% 1%;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      padding: 10px;
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 250px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    .product-card p {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #222;
+      font-size: 1rem;
+      min-height: 3.2em; /* keep consistent height for product titles */
+    }
+
+    .product-card h3 {
+      color: #000000;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .product-card button {
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover,
+    .product-card button:focus {
+      background-color: #636060;
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #004080;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .product-card {
+        width: 48%; /* 2 products per row */
+        margin: 1% 1%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 15px;
+      }
+
+      .search-container,
+      .social-links {
+        margin-top: 10px;
+      }
+
+      .product-card {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .banner h2 {
+        font-size: 1.3rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="IMG/lorem2.svg" alt="Logo Academy Shop" />
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="masculino.html">MASCULINO</a></li>
+        <li><a href="feminino.html">FEMININO</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container" role="search" aria-label="Pesquisar produtos">
+      <input type="text" name="pesq" placeholder="Pesquisar" aria-label="Pesquisar produtos" />
+      <button type="button" onclick="alert('Pesquisa ainda não implementada.');">OK</button>
+    </div>
+
+    <div class="social-links" aria-label="Redes sociais">
+      <a href="https://pt-br.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="img/face_logo_02.png" alt="Facebook" />
+      </a>
+      <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="img/whats_logo_01.png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="img/inst_logo_01.png" alt="Instagram" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner" role="img" aria-label="Banner promocional Academy Shop">
+      <h2>Quer conseguir Frete Grátis? Faça sua primeira compra e consiga o Frete Grátis!</h2>
+    </section>
+
+    <!-- Camisas Section -->
+    <section class="products-section" aria-label="Camisas">
+      <h2>Camisas</h2>
+      <div class="products-container">
+        <div class="product-card" tabindex="0">
+          <img src="IMG/MasculinoCamisa1.jpg" alt="Camiseta Nike Dri-Fit Manga Curta Park VII" />
+          <p>Camiseta Nike Dri-Fit Manga Curta Park VII</p>
+          <h3>R$ 85,49</h3>
+          <button type="button" onclick="alert('Adicionado Camiseta Nike Dri-Fit ao carrinho!')">Comprar</button>
+        </div>
+        <div class="product-card" tabindex="0">
+          <img src="IMG/MasculinoCamisa2.jpg" alt="Camiseta Masculina adidas Manga Curta Small Logo" />
+          <p>Camiseta Masculina adidas Manga Curta Small Logo</p>
+          <h3>R$ 90,98</h3>
+          <button type="button" onclick="alert('Adicionado Camiseta adidas ao carrinho!')">Comprar</button>
+        </div>
+        <div class="product-card" tabindex="0">
+          <img src="IMG/MasculinoCamisa3.jpg" alt="Camisa Umbro Manga Longa Basic UV Protection - Masculina" />
+          <p>Camisa Umbro Manga Longa Basic UV Protection - Masculina</p>
+          <h3>R$ 85,49</h3>
+          <button type="button" onclick="alert('Adicionado Camisa Umbro ao carrinho!')">Comprar</button>
+        </div>
+        <div class="product-card" tabindex="0">
+          <img src="IMG/MasculinoCamisa4.jpg" alt="Camiseta do Neymar Jr Puma Manga Curta Teamliga Jersey" />
+          <p>Camiseta do Neymar Jr Puma Manga Curta Teamliga Jersey</p>
+          <h3>R$ 75,99</h3>
+          <button type="button" onclick="alert('Adicionado Camiseta Neymar Jr ao carrinho!')">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calcão Section -->
+    <section class="products-section" aria-label="Calcões">
+      <h2>Calcões</h2>
+      <div class="products-container">
+        <div class="product-card" tabindex="0">
+          <img src="IMG/MasculinoCalcão1.jpg" alt="Calção Addidas Estro 19 Sport Futesal 2000" />
+          <p>Calção Addidas Estro 19 Sport Futesal 2000</p>
+          <h3>R$ 63,33</h3>
+          <button type="button" onclick="alert('Adicionado Calção Addidas ao carrinho!')">Comprar</button>
+        </div>
+        <div class="product-card" tabindex="0">
+          <img src="IMG/MasculinoCalcão2.jpg" alt="Calção Masculino adidas Estro 19" />
+          <p>Calção Masculino adidas Estro 19</p>
+          <h3>R$ 80,74</h3>
+          <button type="button" onclick="alert('Adicionado Calção adidas ao carrinho!')">Comprar</button>
+        </div>
+        <div class="product-card" tabindex="0">
+          <img src="IMG/cortaVentoMasculio.jpg" alt="Jaqueta Corta Vento com Capuz" />
+          <p>Jaqueta Corta Vento com Capuz</p>
+          <h3>R$ 109,90</h3>
+          <button type="button" onclick="alert('Adicionado Jaqueta Corta Vento ao carrinho!')">Comprar</button>
+        </div>
+        <div class="product-card" tabindex="0">
+          <img src="IMG/camisaDoCorinMasculina.jpg" alt="Camisa Pré-Jogo do Corinthians 25" />
+          <p>Camisa Pré-Jogo do Corinthians 25</p>
+          <h3>R$ 329,99</h3>
+          <button type="button" onclick="alert('Adicionado Camisa Corinthians ao carrinho!')">Comprar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>Produto Acadêmico - SESI Santa Cruz do Rio Pardo - SP<br />Academy Shop</small></p>
+  </footer>
+</body>
+
+</html>
+
+```
