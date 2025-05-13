@@ -13,6 +13,9 @@ body {
     background: #f4f6f8;
     color: #333;
     line-height: 1.6;
+    min-height: 100hv;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Menu topo */
@@ -80,7 +83,7 @@ body {
 .redes_sociais a img:hover {
     filter: brightness(0.8) invert(0.6);
 }
-
+/*  */
 /* Limpa floats e espaçamentos */
 .clear {
     flex-basis: 100%;
@@ -218,29 +221,41 @@ body {
     text-align: center;
 }
 
+/* Container flex para produtos - serve para as linhas Camisas e Calções */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 /* Produtos */
 .produto {
-    width: 23%;
-    float: right;
+    flex: 1 1 calc(25% - 20px);
     background: white;
-    margin: 1% 1% 30px 1%;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-
+    transition: transform 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .produto img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .produto p {
     margin: 10px 0 5px 0;
     font-size: 1rem;
     color: #444;
+    flex-grow: 1;
 }
 
 .produto h3 {
@@ -259,6 +274,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: auto;
 }
 
 .produto button:hover {
@@ -270,11 +286,118 @@ body {
 }
 
 /* Rodapé */
-.rodape {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    margin-top: 50px;
-    font-size: 0.9rem;
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+}
+
+.link {
+    text-decoration:none ;
+}
+
+#roda{
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+}
+
+#contatos h1 {
+    margin-bottom: 0.75rem;
+}
+
+#rede_social {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#rede_social .link {
+    display: flex;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f5f5f5; 
+    border-radius: 50%
+}
+
+#rede_social .limk i {
+    font-size: 1.25rem;
+}
+
+#rede_social .limk:hover {
+    opacity: 1;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #35d366;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    list-style: none;
+
+}
+
+.lista .link {
+    color: #a8a29e;
+    transition: all 0.4s;
+}
+
+.lista .lista:hover {
+    color: #7f37c9;
+}
+
+#sup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#sup p {
+    color: #a8a29e;
+}
+
+#grupo {
+    display: flex;
+    align-items: center;
+    background-color: #0e0c0c;
+    border-radius: 4px;
+}
+
+#grupo input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#grupo button {
+    background-color: #a8a29e;
+    border: none;
+    color: #f5f5f5;
+    padding: 0px 1.25em;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
 }
