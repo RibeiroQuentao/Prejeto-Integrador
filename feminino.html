@@ -1,162 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Academy Shop </title>
-    <link rel="stylesheet" href="ESTILOS/style1.css">
-    <link rel="shortcut icon" href="IMG/IconAcademyShop.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academy Shop</title>
+    <link rel="stylesheet" href="ESTILOS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="IMG/IconAcademyShop.png" type="image/x-icon" />
 </head>
 
 <body>
-    <div class="menu_top">
-        <div class="top_esp">
+    <div class="menu_topo">
+        <div class="topo_espaco">
             <figure>
-                <img src="IMG/lorem2.svg" alt="logo" height="90px">
+                <img src="IMG/lorem2.svg" alt="logo" height="70px" />
             </figure>
         </div>
 
-        <div class="top_dir">
-            ACADEMY SHOP
-        </div>
+        <div class="topo_direita">ACADEMY SHOP</div>
 
-        <div class="down_meio">
-            <input type="text" name="pesq" placeholder="Pesquisar">
+        <div class="pesquisa_meio">
+            <input type="text" name="pesquisa" placeholder="Pesquisar" />
             <button>OK</button>
         </div>
-
-
-
-        <div class="down_down">
-            <a href="https://pt-br.facebook.com/" target="_blank"><img src="img/face_logo_02.png" width="20"
-                    height="20"></a>
-            <a href="https://web.whatsapp.com/" target="_blank"><img src="img/whats_logo_01.png" width="20"
-                    height="20"></a>
-            <a href="https://wwww. instagram.com/" target="_blank"><img src="img/inst_logo_01.png" width="20"
-                    height="20"></a>
         </div>
-
-
-        <div class="clear"></div>
     </div>
 
-    <div class="menu_donw">
+    <div class="menu_inferior">
         <nav class="menu">
             <ul>
-                <a href="index.html">
-                    <li>HOME</li>
-                </a>
-                <a href="masculino.html">
-                    <li>MASCULINO</li>
-                </a>
-                <a href="feminino.html">
-                    <li>FEMININO</li>
-                </a>
-                <a href="sobre.html">
-                    <li>SOBRE</li>
-                </a>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="masculino.html">MASCULINO</a></li>
+                <li><a href="feminino.html">FEMININO</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
             </ul>
         </nav>
     </div>
-    </div>
 
-    <main class="ban_ind">
-        <section align="center">
-            <img src="IMG/banner2.png" width="100%" height="500px">
-            <h2>
-                <p>Quer conseguir Frete Grátis? Faça sua primeira compra e consiga o Frete Grátis!</p>
-            </h2>
-            <div>
-                <table border="2" align="center">
-                    <caption>
-                        <h2>Camisas</h2>
-                    </caption>
-                    <tr>
-                        <th><img src="IMG/Feminina1" width="400" height="350" alt="Imagem 1">
-                            <p>Camiseta Feminina Nike Manga Curta Sportswear
-                                <br>
-                            <h2>R$ 109,24</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        <th><img src="IMG/Feminina2" width="400" height="350" alt="Imagem 1">
-                            <p>Camiseta Feminina Fila Manga Curta Basic
-                                <br>
-                            <h2>R$ 71,24</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        <th><img src="IMG/Feminina3" width="400" height="350" alt="Imagem 1">
-                            <p>Camiseta Feminina Oxer Manga Longa
-                                <br>
-                            <h2>R$ 65,49</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        <th><img src="IMG/Feminina4" width="400" height="350" alt="Imagem 1">
-                            <p>Camiseta adidas Manga Curta 3 Listras
-                                <br>
-                            <h2>R$ 67,49</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        </th>
-                    </tr>
-                </table>
+    <main>
+        <section align="center" class="banner-principal">
+            <img src="IMG/banner2.png" width="100%" height="500px" alt="Banner Principal" />
+            <h2>Quer conseguir Frete Grátis? Faça sua primeira compra e consiga o Frete Grátis!</h2>
+        </section>
+
+        <section class="linha-produtos">
+            <h2 class="título-seção">Camisas</h2>
+            <div class="produtos-container">
+                <div class="produto">
+                    <img src="IMG/Feminina1" alt="Camiseta Nike Dri-Fit" />
+                    <p>Camiseta Feminina Nike Manga Curta Sportswear</p>
+                    <h3>R$ 109,24</h3>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/Feminina2" alt="Camiseta Adidas" />
+                    <p>Camiseta Feminina Fila Manga Curta Basica</p>
+                    <h3>R$ 90,98</h3>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/Feminina3" alt="Camisa Umbro" />
+                    <p>Camisa Umbro Manga Longa Basic UV Protection - Masculina</p>
+                    <h3>R$ 85,49</h3>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/Feminina4" alt="Camiseta Neymar" />
+                    <p>Camiseta Feminina Oxer Manga Longa</p>
+                    <h3>R$ 75,99</h3>
+                    <button>Comprar</button>
+                </div>
             </div>
-            <hr>
-            <div>
-                <table border="2" align="center">
-                    <caption>
-                        <h2>Outras Peças</h2>
-                    </caption>
-                    <tr>
-                        <th><img src="IMG/Feminina5" width="400" height="350" alt="Imagem 1">
-                            <p>Maiô Speedo Cross Ii
-                                <br>
-                            <h2>R$ 81,90</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        <th><img src="IMG/Feminina6" width="400" height="350" alt="Imagem 1">
-                            <p>Saia adidas Plissada Club Tennis Climacool
-                                <br>
-                            <h2>R$  299,99</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        <th><img src="IMG/Feminina7" width="400" height="350" alt="Imagem 1">
-                            <p>Calça Legging Feminina
-                                <br>
-                            <h2>R$ 71,24</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        <th><img src="IMG/Feminina8" width="400" height="350" alt="Imagem 1">
-                            <p>Tênis Nike Downshifter 13 Feminino
-                                <br>
-                            <h2>R$ 349,99</h2>
-                            </p>
-                            <button>Comprar</button>
-                        </th>
-                        </th>
-                    </tr>
-                </table>
+        </section>
+
+        <section class="linha-produtos">
+            <h2 class="título-seção">Outras Peças</h2>
+            <div class="produtos-container">
+                <div class="produto">
+                    <img src="IMG/Feminina5" alt="Calção Adidas" />
+                    <p>Maiô Speedo Cross Ii</p>
+                    <h3>R$ 63,33</h3>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/Feminina6" alt="Calça Oxer" />
+                    <p>Saia adidas Plissada Club Tennis Climacool</p>
+                    <h3>R$ 80,74</h3>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/Feminina7" alt="Jaqueta Corta Vento" />
+                    <p>Calça Legging Branca Feminina</p>
+                    <h3>R$ 109,90</h3>
+                    <button>Comprar</button>
+                </div>
+
+                <div class="produto">
+                    <img src="IMG/Feminina8" alt="Camisa Corinthians" />
+                    <p>Tênis Nike Downshifter 13 Feminino</p>
+                    <h3>R$ 329,99</h3>
+                    <button>Comprar</button>
+                </div>
             </div>
+        </section>
     </main>
-    <hr>
-    <footer class="roda_g">
-        <p><small>Produto Academico - SESI Santa Cruz do Rio Pardo - SP<br>Academy Shop</small></p>
-    </footer>
 
+   <footer>
+        <div id="roda">
+            <div id="contatos">
+                <h1>ACADEMY SHOP</h1>
+                <p>É tudo sobre seus sonhos.</p>
 
+                <div id="rede_social">
+                    <a href="#" class="link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
+                    <a href="#" class="link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="lista">
+                <li>
+                    <h3>Ajuda e atendimento</h3>
+                </li>
+                <li>
+                    <a href="#" class="link">Acompanhe seu pedido</a>
+                </li>
+                <li>
+                    <a href="#" class="link">Dúvidas Frequentes</a>
+                </li>
+                <li>
+                    <a href="#" class="link">Fale com o agente</a>
+                </li>
+            </ul>
+            <ul class="lista">
+                <li>
+                    <h3>Políticas e regulamentos</h3>
+                </li>
+                <li>
+                    <a href="#" class="link">Política de privacidade</a>
+                </li>
+                <li>
+                    <a href="#" class="link">Regulamentos</a>
+                </li>
+                <li>
+                    <a href="#" class="link">Termos e condições</a>
+                </li>
+            </ul>
+            <div id="sup">
+                <h3>Suporte</h3>
     
-       
-
-
-
+                <p>
+                    Digite seu e-mail para ser notificado sobre nossas soluções de problemas. 
+                </p>
+                <div id="grupo">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                &#169
+                Santa Cruz do Rio Pardo - Senai
+                2025
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
