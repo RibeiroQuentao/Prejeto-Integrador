@@ -47,7 +47,7 @@ body {
     max-width: 350px;
 }
 
-.pesquisa_meio input[type="text"] {
+.pesquisa_meio input{
     flex-grow: 1;
     padding: 7px 10px;
     border: none;
@@ -68,7 +68,7 @@ body {
 .pesquisa_meio button:hover {
     background-color: #5f5f5f;
 }
-/*  */
+
 /* Limpa floats e espaçamentos */
 .clear {
     flex-basis: 100%;
@@ -222,7 +222,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
     cursor: default;
     display: flex;
     flex-direction: column;
@@ -258,16 +257,11 @@ body {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     margin-top: auto;
 }
 
 .produto button:hover {
     background-color: #555;
-}
-
-.produto:hover {
-    transform: translateY(-5px);
 }
 
 /* Rodapé */
@@ -289,7 +283,7 @@ footer {
 }
 
 #roda{
-    background-color: #171717;
+    background-color: #000000;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     padding: 3rem 3.5rem;
@@ -317,15 +311,15 @@ footer {
 }
 
 #instagram {    
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    background-color: #555;
 }
 
 #facebook {
-    background-color: #4267b3;
+    background-color: #555;
 }
 
 #whatsapp {
-    background-color: #35d366;
+    background-color: #555;
 }
 
 .lista {
@@ -358,7 +352,7 @@ footer {
 #grupo {
     display: flex;
     align-items: center;
-    background-color: #0e0c0c;
+    background-color: #444;
     border-radius: 4px;
 }
 
