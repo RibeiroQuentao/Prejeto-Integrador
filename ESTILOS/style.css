@@ -18,6 +18,19 @@ body {
     flex-direction: column;
 }
 
+.sobre{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.sobre h1 {
+    font-family: 24px;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    margin-bottom: 20px;
+}
 /* Menu topo */
 .menu_topo {
     background-color: #000000;
