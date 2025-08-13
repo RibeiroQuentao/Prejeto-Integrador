@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0055aa;
+        }
+        #cart-items {
+            margin: 10px 0;
+        }
+        #cart-items div {
+            margin: 5px 0;
+            padding: 8px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Loja de Roupas</h1>
+
+    <h2>Produtos</h2>
+    <div>
+        <h3>Camiseta - R$49.90</h3>
+        <button onclick="addToCart('Camiseta', 49.90)">Adicionar ao Carrinho</button>
+    </div>
+    <div>
+        <h3>Calça Jeans - R$129.90</h3>
+        <button onclick="addToCart('Calça Jeans', 129.90)">Adicionar ao Carrinho</button>
+    </div>
+    <div>
+        <h3>Tênis - R$199.90</h3>
+        <button onclick="addToCart('Tênis', 199.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <h2>Carrinho (<span id="cart-count">0</span>)</h2>
+    <div id="cart-items"></div>
+    <p id="cart-total">Total: R$0.00</p>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+            alert(`${name} foi adicionado ao carrinho!`);
+        }
+
+        function removeFromCart(name) {
+            const index = cart.findIndex(item => item.name === name);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            let total = 0;
+            // Group items by name to show quantities
+            const itemsMap = {};
+            cart.forEach(item => {
+                if (!itemsMap[item.name]) {
+                    itemsMap[item.name] = {
+                        ...item,
+                        quantity: 0
+                    };
+                }
+                itemsMap[item.name].quantity++;
+                total += item.price;
+            });
+
+            // Display grouped items with remove buttons
+            for (const [name, item] of Object.entries(itemsMap)) {
+                cartItemsContainer.innerHTML += `
+                    <div>
+                        ${name} - R${item.price.toFixed(2)} 
+                        (${item.quantity}x) 
+                        <button onclick="removeFromCart('${name}')">Remover</button>
+                    </div>
+                `;
+            }
+
+            // Update item count
+            document.getElementById('cart-count').textContent = cart.length;
+
+            document.getElementById('cart-total').innerText = `Total: R$${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
