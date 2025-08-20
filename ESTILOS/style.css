@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 /* Reset */
 * {
     margin: 0;
@@ -8,14 +9,16 @@
 
 /* Fonte*/
 body {
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter';
     background: #f4f6f8;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
     min-height: 100hv;
     display: flex;
     flex-direction: column;
 }
+
+
 
 /* Menu topo */
 .menu_topo {
@@ -124,7 +127,9 @@ body {
 .banner_inicial .promocao h2 {
     text-align: center;
     margin: 15px 0;
-    color: #000000;
+  color: #555;
+    font-family: 'Inter';
+    font-size: 30px;
 }
 
 .banner_inicial .destaques {
@@ -185,6 +190,9 @@ body {
     text-align: center;
     margin: 15px 0;
     color: #555;
+    font-size: 30px;
+      font-weight: 500;
+    
 }
 
 /* Linha de produtos */
@@ -267,13 +275,14 @@ body {
 }
 
 .sobre h1 {
-    font-family: 24px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
 .sobre p {
     margin-bottom: 20px;
 }
+
 
 /* Rodapé */
 * {
