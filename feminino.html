@@ -45,9 +45,12 @@
             <img src="IMG/banner2.png" width="100%" height="500px" alt="Banner Principal" />
             <h2>Quer conseguir Frete Grátis? Faça sua primeira compra e consiga o Frete Grátis!</h2>
         </section>
-
+        
         <section class="linha-produtos">
             <h2 class="título-seção">Camisas</h2>
+            <div class="alert alert-success text-center" role="alert" style="margin-bottom: 24px;">
+                Promoção especial: Ganhe 10% de desconto nas camisas femininas! Use o cupom <b>ACADEMY10</b> no carrinho.
+            </div>
             <div class="produtos-container">
                 <div class="produto">
                     <img src="IMG/Feminina1" alt="Camiseta Nike Dri-Fit" />
@@ -125,9 +128,6 @@
                 <li class="page-item">
                     <a class="page-link active" href="#">3</a>
                 </li>
-                <li class="page-item">
-                    <a class="page-link active" href="#">4</a>
-                </li>
             </ul>
         </nav>
     </div>
@@ -190,6 +190,19 @@
             </div>
         </div>
     </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const botoesComprar = document.querySelectorAll('button');
+                botoesComprar.forEach(function(botao) {
+                    if (botao.textContent.trim().toLowerCase() === 'comprar') {
+                        botao.addEventListener('click', function() {
+                            alert('Produto adicionado ao carrinho com sucesso!');
+                        });
+                    }
+                });
+            });
+        </script>
 </body>
 
 </html>

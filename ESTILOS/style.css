@@ -82,22 +82,29 @@ body {
 }
 
 .menu_inferior nav.menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0px !important;
 }
 
 .menu_inferior nav.menu ul li {
-    margin: 0 25px;
+    margin: 0 25px !important;
+    list-style: none !important;
+    padding: 0 !important;
 }
 
 .menu_inferior nav.menu ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px 10px;
-    font-weight: 600;
-    font-size: 15px;
+    display: block !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 15px 10px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
 }
 
 .menu_inferior nav.menu ul li a:hover {
@@ -160,7 +167,7 @@ body {
 .banner_inicial .promocoes h1 {
     color: #555;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 700 ;
 }
 
 .banner_inicial .promocoes img {
@@ -229,6 +236,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
 }
 
 .produto img {
@@ -236,8 +244,20 @@ body {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1);
 }
 
+/* Animação ao passar o mouse nos produtos */
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 2;
+}
+
+.produto:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
 .produto p {
     margin: 10px 0 5px 0;
     font-size: 1rem;
@@ -303,7 +323,7 @@ footer {
 }
 
 #roda {
-    background-color: #000000;
+    background: linear-gradient(135deg, #000 0%, #828282 100%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 48px 50px;
@@ -389,7 +409,34 @@ footer {
     cursor: pointer;
 }
 
-/* Responsividade */
+/* Paginação*/
+.pagination {
+    margin-top: 32px;
+    gap: 10px;
+}
+
+.pagination .page-item .page-link {
+    background: #000 !important;
+    color: #fff !important;
+    border: none !important;
+    margin: 0 4px;
+    border-radius: 6px !important;
+    transition: background 0.2s;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-link.active {
+    background: #222 !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.pagination .page-link:hover {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+/* Respansividade */
 @media (max-width: 575px) {
     .produto {
         flex: 1 1 100%; /* Cada produto ocupa 100% da largura */
