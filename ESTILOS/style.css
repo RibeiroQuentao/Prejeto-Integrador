@@ -372,20 +372,6 @@ footer {
     background-color: #555;
 }
 
-.lista {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    list-style: none;
-}
-
-.lista .link {
-    color: #a8a29e;
-}
-
-.lista .lista:hover {
-    color: #7f37c9;
-}
 
 #sup {
     display: flex;
@@ -394,7 +380,7 @@ footer {
 }
 
 #sup p {
-    color: #a8a29e;
+    color: #ffffff;
 }
 
 #grupo {
@@ -450,67 +436,67 @@ footer {
 /* Respansividade */
 @media (max-width: 575px) {
     .produto {
-        flex: 1 1 100%; /* Cada produto ocupa 100% da largura */
+        flex: 1 1 100%;
     }
 
     .menu_topo {
-        flex-direction: column; /* Menu empilhado */
-        align-items: flex-start; /* Alinhamento à esquerda */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .pesquisa_meio {
-        max-width: 100%; /* Pesquisa ocupa 100% */
+        max-width: 100%; 
     }
 
     #roda {
-        grid-template-columns: 1fr; /* Rodapé em uma coluna */
+        grid-template-columns: 1fr;
     }
 }
 
 /* Small Devices (Landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767px) {
     .produto {
-        flex: 1 1 calc(50% - 20px); /* Dois produtos por linha */
+        flex: 1 1 calc(50% - 20px);
     }
 
     .menu_topo {
-        flex-direction: row; /* Menu em linha */
+        flex-direction: row;
     }
 
     #roda {
-        grid-template-columns: repeat(2, 1fr); /* Rodapé em duas colunas */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Medium Devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991px) {
     .produto {
-        flex: 1 1 calc(33.33% - 20px); /* Três produtos por linha */
+        flex: 1 1 calc(33.33% - 20px);
     }
 
     #roda {
-        grid-template-columns: repeat(3, 1fr); /* Rodapé em três colunas */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Large Devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199px) {
     .produto {
-        flex: 1 1 calc(25% - 20px); /* Quatro produtos por linha */
+        flex: 1 1 calc(25% - 20px);
     }
 
     #roda {
-        grid-template-columns: repeat(4, 1fr); /* Rodapé em quatro colunas */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 /* Extra Devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
     .produto {
-        flex: 1 1 calc(20% - 20px); /* Cinco produtos por linha */
+        flex: 1 1 calc(20% - 20px); 
     }
 
     #roda {
-        grid-template-columns: repeat(4, 1fr); /* Rodapé em quatro colunas */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
